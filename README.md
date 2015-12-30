@@ -14,8 +14,8 @@ Role Variables
 List of Ruby Gems to Install. Optional.
 
     ruby_18_gems:
-      - rake
-      - rails
+      - { name: "rake", version: "0.8.7" }
+      - { name: "rails", version: "2.3.5" }
 
 Dependencies
 ------------
@@ -32,8 +32,8 @@ Example ruby-18-playbook.yml
       
       vars:
         ruby_18_gems:
-          - rake
-          - rails
+          - { name: "rake", version: "0.8.7" }
+          - { name: "rails", version: "2.3.5" }
     
       roles:
         - ruby-1.8
