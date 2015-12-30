@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  description: Install Ruby 1.8
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.4
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+    - lucid
+    - maverick
+    - natty
+    - oneiric
+    - precise
+    - quantal
+    - raring
+    - saucy
+    - trusty
+  categories:
+    - development
+dependencies: []

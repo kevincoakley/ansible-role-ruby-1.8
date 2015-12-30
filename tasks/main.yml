@@ -1,0 +1,19 @@
+---
+- name: Install software-properties-common
+  apt: name=software-properties-common state=present
+
+- name: Add the brightbox/ruby-ng ppa for Ruby 1.8
+  apt_repository: repo='ppa:brightbox/ruby-ng'
+
+- name: Update apt caches
+  apt: update_cache=yes
+
+- name: Install Ruby 1.8
+  apt: name={{ item }} state=present
+  with_items:
+    - ruby1.8
+    - rubygems1.8
+
+- name: Install Ruby Gems
+  gem: name={{ item.name }} version={{ item.version }} state=present
+  with_items: ruby_18_gems
